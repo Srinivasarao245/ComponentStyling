@@ -1,0 +1,41 @@
+<!-- Display each array object in flex boxes with respective gender images in React Component -->
+<html></html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+     <body>
+        <div id="a1"></div>
+        <script type="text/babel">
+            var Ab = function(){
+                var [a,setA] = React.useState([
+                { name: "Alice", age: 20, gender: "female", id: "S001" },
+                { name: "Bob", age: 22, gender: "male", id: "S002" },
+                { name: "Charlie", age: 21, gender: "non-binary", id: "S003" },
+                { name: "Diana", age: 19, gender: "female", id: "S004" },
+                { name: "Ethan", age: 23, gender: "male", id: "S005" },
+                { name: "Fiona", age: 20, gender: "female", id: "S006" },
+                { name: "George", age: 24, gender: "male", id: "S007" },
+                { name: "Hannah", age: 22, gender: "female", id: "S008" },
+                { name: "Ian", age: 21, gender: "male", id: "S009" },
+                { name: "Jasmine", age: 19, gender: "female", id: "S010" }, ])
+                var male1 = "https://cali.vn/storage/app/media/old/lich-tap-gym-hieu-qua---1581935800.jpg";
+                var female1 = "https://www.wallpaperflare.com/static/186/702/497/women-bodybuilder-muscles-rear-view-wallpaper.jpg";
+                return ( <div style = {{display:'flex', flexWrap :'wrap'}} > { a.map((b)=>{
+                    return ( <div style={{width:'250px',border:'1px solid',padding:'5px',margin:'5px'}}> 
+                                <div style={b.gender === "male" ? { backgroundColor:'blue'} : {backgroundColor:'pink'} } >
+                                    <h1>Name:{b.name}</h1>
+                                    <h1>Age:{b.age}</h1>
+                                    <h1>Gender:{b.gender}</h1>
+                                    <i>Id:{b.id}</i> <br/>
+                                    </div>
+                                    <img width='250px' src={b.gender==='male'?male1:female1} alt=""/>     
+
+                              </div> 
+                            ) }) } </div> )
+            }
+            ReactDOM.render(<Ab/>,document.getElementById('a1'));
+        </script>
+     </body>
+</html>

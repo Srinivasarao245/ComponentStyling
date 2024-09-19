@@ -1,0 +1,109 @@
+<!-- Display array of objects in table with female students row in pink male in blue in React Component -->
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+     <body>
+        <div id="a1"></div>
+        <script type="text/babel">
+            var Ab = function (){
+                var [a,setA] = React.useState([
+                            {
+                                "name": "Alice",
+                                "lastname": "Smith",
+                                "age": 20,
+                                "gender": "Female",
+                                "id": "S001"
+                            },
+                            {
+                                "name": "Bob",
+                                "lastname": "Johnson",
+                                "age": 21,
+                                "gender": "Male",
+                                "id": "S002"
+                            },
+                            {
+                                "name": "Charlie",
+                                "lastname": "Williams",
+                                "age": 19,
+                                "gender": "Male",
+                                "id": "S003"
+                            },
+                            {
+                                "name": "Diana",
+                                "lastname": "Brown",
+                                "age": 22,
+                                "gender": "Female",
+                                "id": "S004"
+                            },
+                            {
+                                "name": "Ethan",
+                                "lastname": "Jones",
+                                "age": 18,
+                                "gender": "Male",
+                                "id": "S005"
+                            },
+                            {
+                                "name": "Fiona",
+                                "lastname": "Garcia",
+                                "age": 20,
+                                "gender": "Female",
+                                "id": "S006"
+                            },
+                            {
+                                "name": "George",
+                                "lastname": "Martinez",
+                                "age": 23,
+                                "gender": "Male",
+                                "id": "S007"
+                            },
+                            {
+                                "name": "Hannah",
+                                "lastname": "Davis",
+                                "age": 21,
+                                "gender": "Female",
+                                "id": "S008"
+                            },
+                            {
+                                "name": "Isaac",
+                                "lastname": "Rodriguez",
+                                "age": 19,
+                                "gender": "Male",
+                                "id": "S009"
+                            },
+                            {
+                                "name": "Julia",
+                                "lastname": "Martinez",
+                                "age": 22,
+                                "gender": "Female",
+                                "id": "S010"
+                            } ]);
+                            var male1 = "https://live.staticflickr.com/4724/25039883267_5b3eaede33.jpg";
+                            var female1 = "https://i.pinimg.com/originals/30/fd/b1/30fdb14b2e246e8151bbac0ef26d5a32.jpg";
+                return ( <table border='2'> 
+                            <thead >
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Lastname</th>
+                                <th>Age</th>
+                                <th>Gender</th>
+                                <th>Image</th>
+                            </thead>
+                            <tbody>
+                                { a.map((b)=>{return (
+                                    <tr style={b.gender==="Female"?{backgroundColor:'lightpink'}:{backgroundColor:'lightblue'}} ><td>{b.id}</td>
+                                        <td>{b.name}</td>
+                                        <td>{b.lastname}</td>
+                                        <td>{b.age}</td>
+                                        <td>{b.gender}</td>
+                                        <td> <img width='100px' src={ b.gender === 'Male'? male1 : female1 } /> </td>
+                                    </tr>
+                                )}) }
+                                    </tbody>    
+                                    </table> ) }
+            ReactDOM.render(<Ab/>,document.getElementById('a1'));
+        </script>
+     </body>
+</html>

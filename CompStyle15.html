@@ -1,0 +1,17 @@
+<!-- Display each array element in flex boxes in React Component -->
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+     <body>
+        <div id="a1"></div>
+        <script type="text/babel">
+            var Ab = function (){
+                var [a,setA] = React.useState( [3,12, 7, 18, 1, 14, 9, 4, 6, 8, 2, 5, 20] );
+                 return ( <div style={{display:'flex'}}>{ a.map((b)=>{ return  <div style = {{border:'1px solid',margin:'5px',padding:'5px'}} >{b}</div>  }) }</div> )}
+            ReactDOM.render(<Ab/>,document.getElementById('a1'));
+        </script>
+     </body>
+</html>

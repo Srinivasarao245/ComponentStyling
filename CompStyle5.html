@@ -1,0 +1,27 @@
+<!-- Display each object properties in React Component -->
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="a1"></div>
+        <script type="text/babel">
+            var Ab = function (){
+                var [a,setA] = React.useState({firstname: "Srinivasarao",
+                                                lastname: "bagam",
+                                                gender: "male",
+                                                age: 25})
+                return (<div style={{border:'1px solid',margin:'5px',padding:'5px'}}> 
+                            <h1>Name:{a.firstname}</h1>
+                            <h2>Gender:{a.gender}</h2>
+                            <i>Age:{a.age}</i>
+                        </div>)
+            }
+            ReactDOM.render(<Ab/>,document.getElementById('a1'));
+        </script>
+    </body>
+</html>    
+    
+        

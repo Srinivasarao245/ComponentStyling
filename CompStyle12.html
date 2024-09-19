@@ -1,0 +1,19 @@
+<!-- Apply green color if string length is even red for odd in React Component -->
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+     <body>
+        <div id="a1"></div>
+        <script type="text/babel">
+            var Ab = function (){
+                var x = prompt();
+                var [a,setA] = React.useState(x);
+                return( <div>{ <h1 style={a.length%2===0?{color:'green'}:{color:'red'}}>{a}</h1> }</div> )
+            }
+            ReactDOM.render(<Ab/>,document.getElementById('a1'));
+        </script>
+     </body>
+</html>
