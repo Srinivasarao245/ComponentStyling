@@ -8,9 +8,12 @@
      <body>
         <div id="a1"></div>
         <script type="text/babel">
-            function sri(){ alert('Hello Srinivas')}
-            var b = <button onClick={sri}>Click Here to see alert</button>
-            ReactDOM.render(b,document.getElementById('a1'));
+             var Ab = function (){
+                return (<div>
+                            {<h1 style={{color:'yellow',backgroundColor:'red'}} >Hello Srinivas Welcome to Edupoly</h1>}
+                       </div>)
+             }
+             ReactDOM.render(<Ab/>,document.getElementById('a1'));
         </script>
      </body>
 </html>
